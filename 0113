@@ -1,0 +1,440 @@
+pred 사용 model
+timesnet
+itransformer
+nontationary
+patchtst
+tft
+tide
+
+
+<윤선님 숙제 - jupyter notebook>
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "fdd38406",
+   "metadata": {},
+   "source": [
+    "# 퍼셉트론과 다층 퍼셉트론 실습"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0ed20ee4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "# 한글 폰트 설정\n",
+    "plt.rcParams['font.family'] = 'Malgun Gothic'\n",
+    "plt.rcParams['axes.unicode_minus'] = False"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62df7f10",
+   "metadata": {},
+   "source": [
+    "## 1. 단순 퍼셉트론 구현\n",
+    "\n",
+    "아래 조건에 만족하는 퍼셉트론을 직접 구현해보세용\n",
+    "\n",
+    "### 퍼셉트론의 구조\n",
+    "\n",
+    "**수식:** $y = f(w_1x_1 + w_2x_2 + ... + w_nx_n + b)$\n",
+    "\n",
+    "**주요 구성 요소:**\n",
+    "\n",
+    "1. **입력 (Input)**: $x = [x_1, x_2, ..., x_n]$\n",
+    "   - 차원: $n$ (입력 변수의 개수)\n",
+    "   - 예: AND 게이트는 2개 입력 → 2차원 벡터\n",
+    "\n",
+    "2. **가중치 (Weights)**: $w = [w_1, w_2, ..., w_n]$\n",
+    "   - 차원: $n$ (입력과 동일)\n",
+    "   - 각 입력이 출력에 미치는 영향력을 나타냄\n",
+    "   - 값이 클수록 해당 입력이 중요함\n",
+    "\n",
+    "3. **바이어스 (Bias)**: $b$\n",
+    "   - 차원: 스칼라 (1개 값)\n",
+    "   - 활성화 임계값을 조정하는 역할\n",
+    "   - 음수 바이어스 = 높은 임계값 (두 입력이 모두 커야 활성화)\n",
+    "   - 양수 바이어스 = 낮은 임계값 (입력이 작아도 활성화 가능)\n",
+    "\n",
+    "4. **가중합 (Weighted Sum)**: $z = w_1x_1 + w_2x_2 + ... + w_nx_n + b$\n",
+    "\n",
+    "5. **활성화 함수 (Activation Function)**: $y = f(z)$\n",
+    "   - 계단 함수: $f(z) = \\begin{cases} 1 & \\text{if } z > 0 \\\\ 0 & \\text{otherwise} \\end{cases}$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "61a22280",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "41d04ec1",
+   "metadata": {},
+   "source": [
+    "### 1.1 AND 게이트 구현\n",
+    "\n",
+    "**AND 게이트의 진리표:**\n",
+    "\n",
+    "| $x_1$ | $x_2$ | 출력 |\n",
+    "|-------|-------|------|\n",
+    "| 0     | 0     | 0    |\n",
+    "| 0     | 1     | 0    |\n",
+    "| 1     | 0     | 0    |\n",
+    "| 1     | 1     | 1    |\n",
+    "\n",
+    "**퍼셉트론 파라미터 설정:**\n",
+    "\n",
+    "- **입력 차원**: 2 (두 개의 입력 $x_1, x_2$)\n",
+    "- **가중치**: $w = [0.5, 0.5]$ (2차원 벡터)\n",
+    "  - $w_1 = 0.5$: 첫 번째 입력의 가중치\n",
+    "  - $w_2 = 0.5$: 두 번째 입력의 가중치\n",
+    "  - 두 입력이 동등하게 중요함\n",
+    "- **바이어스**: $b = -0.7$\n",
+    "  - 음수 바이어스 → 높은 임계값\n",
+    "  - 두 입력이 모두 1일 때만 가중합이 양수가 됨\n",
+    "\n",
+    "**계산 예시:**\n",
+    "- $(x_1=0, x_2=0)$: $z = 0.5×0 + 0.5×0 + (-0.7) = -0.7$ → 출력 0\n",
+    "- $(x_1=0, x_2=1)$: $z = 0.5×0 + 0.5×1 + (-0.7) = -0.2$ → 출력 0\n",
+    "- $(x_1=1, x_2=0)$: $z = 0.5×1 + 0.5×0 + (-0.7) = -0.2$ → 출력 0\n",
+    "- $(x_1=1, x_2=1)$: $z = 0.5×1 + 0.5×1 + (-0.7) = 0.3$ → 출력 1 ✓"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "df8bd930",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5c921a03",
+   "metadata": {},
+   "source": [
+    "### 1.2 OR 게이트 구현\n",
+    "\n",
+    "**OR 게이트의 진리표:**\n",
+    "\n",
+    "| $x_1$ | $x_2$ | 출력 |\n",
+    "|-------|-------|------|\n",
+    "| 0     | 0     | 0    |\n",
+    "| 0     | 1     | 1    |\n",
+    "| 1     | 0     | 1    |\n",
+    "| 1     | 1     | 1    |\n",
+    "\n",
+    "**퍼셉트론 파라미터 설정:**\n",
+    "\n",
+    "- **입력 차원**: 2\n",
+    "- **가중치**: $w = [0.5, 0.5]$ (2차원 벡터)\n",
+    "  - AND와 동일한 가중치\n",
+    "- **바이어스**: $b = -0.2$\n",
+    "  - AND보다 큰 바이어스 (-0.2 > -0.7)\n",
+    "  - 더 낮은 임계값 → 하나의 입력만 1이어도 활성화\n",
+    "\n",
+    "**계산 예시:**\n",
+    "- $(x_1=0, x_2=0)$: $z = 0.5×0 + 0.5×0 + (-0.2) = -0.2$ → 출력 0\n",
+    "- $(x_1=0, x_2=1)$: $z = 0.5×0 + 0.5×1 + (-0.2) = 0.3$ → 출력 1 ✓\n",
+    "- $(x_1=1, x_2=0)$: $z = 0.5×1 + 0.5×0 + (-0.2) = 0.3$ → 출력 1 ✓\n",
+    "- $(x_1=1, x_2=1)$: $z = 0.5×1 + 0.5×1 + (-0.2) = 0.8$ → 출력 1 ✓\n",
+    "\n",
+    "**AND vs OR 비교:**\n",
+    "- 가중치는 동일 → 바이어스만 다름\n",
+    "- OR는 더 관대한 임계값을 가짐"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4cc85043",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "429f364b",
+   "metadata": {},
+   "source": [
+    "### 1.3 NAND 게이트 구현\n",
+    "\n",
+    "**NAND 게이트의 진리표:**\n",
+    "\n",
+    "| $x_1$ | $x_2$ | 출력 |\n",
+    "|-------|-------|------|\n",
+    "| 0     | 0     | 1    |\n",
+    "| 0     | 1     | 1    |\n",
+    "| 1     | 0     | 1    |\n",
+    "| 1     | 1     | 0    |\n",
+    "\n",
+    "**퍼셉트론 파라미터 설정:**\n",
+    "\n",
+    "- **입력 차원**: 2\n",
+    "- **가중치**: $w = [-0.5, -0.5]$ (2차원 벡터)\n",
+    "  - **음수 가중치** → 입력이 클수록 출력을 억제\n",
+    "  - AND의 부정(NOT)\n",
+    "- **바이어스**: $b = 0.7$\n",
+    "  - **양수 바이어스** → 기본적으로 활성화되어 있음\n",
+    "  - 입력이 없으면 자동으로 출력 1\n",
+    "\n",
+    "**계산 예시:**\n",
+    "- $(x_1=0, x_2=0)$: $z = -0.5×0 + (-0.5)×0 + 0.7 = 0.7$ → 출력 1 ✓\n",
+    "- $(x_1=0, x_2=1)$: $z = -0.5×0 + (-0.5)×1 + 0.7 = 0.2$ → 출력 1 ✓\n",
+    "- $(x_1=1, x_2=0)$: $z = -0.5×1 + (-0.5)×0 + 0.7 = 0.2$ → 출력 1 ✓\n",
+    "- $(x_1=1, x_2=1)$: $z = -0.5×1 + (-0.5)×1 + 0.7 = -0.3$ → 출력 0 ✓\n",
+    "\n",
+    "**핵심 개념:**\n",
+    "- 음수 가중치 + 양수 바이어스 = 반전 논리\n",
+    "- 입력이 증가할수록 가중합이 감소"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dfe96935",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "090f7ca0",
+   "metadata": {},
+   "source": [
+    "## 2. XOR 문제: 단층 퍼셉트론의 한계\n",
+    "\n",
+    "NAND, OR, AND Function을 사용하여 XOR Function을 만드시오"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c5248a9c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c7d8e93",
+   "metadata": {},
+   "source": [
+    "## 3. 활성화 함수 구현"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7189001e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def sigmoid(x):\n",
+    "    \"\"\"시그모이드 함수\"\"\"\n",
+    "    return\n",
+    "\n",
+    "\n",
+    "def relu(x):\n",
+    "    \"\"\"ReLU 함수\"\"\"\n",
+    "    return \n",
+    "\n",
+    "def tanh(x):\n",
+    "    \"\"\"Tanh 함수\"\"\"\n",
+    "    return \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "46604e5d",
+   "metadata": {},
+   "source": [
+    "### 활성화 함수 시각화\n",
+    "위에서 함수를 직접 구현해보고 아래 cell을 run하여 시각화해보세용~^_^"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3b0c02ec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = np.linspace(-5, 5, 100)\n",
+    "\n",
+    "fig, axes = plt.subplots(2, 3, figsize=(15, 8))\n",
+    "\n",
+    "# Sigmoid\n",
+    "axes[0, 0].plot(x, sigmoid(x), 'b-', linewidth=2)\n",
+    "axes[0, 0].set_title('Sigmoid 함수', fontsize=12)\n",
+    "axes[0, 0].grid(True, alpha=0.3)\n",
+    "axes[0, 0].axhline(y=0, color='k', linewidth=0.5)\n",
+    "axes[0, 0].axvline(x=0, color='k', linewidth=0.5)\n",
+    "\n",
+    "\n",
+    "# ReLU\n",
+    "axes[0, 1].plot(x, relu(x), 'r-', linewidth=2)\n",
+    "axes[0, 1].set_title('ReLU 함수', fontsize=12)\n",
+    "axes[0, 1].grid(True, alpha=0.3)\n",
+    "axes[0, 1].axhline(y=0, color='k', linewidth=0.5)\n",
+    "axes[0, 1].axvline(x=0, color='k', linewidth=0.5)\n",
+    "\n",
+    "\n",
+    "# Tanh\n",
+    "axes[0, 2].plot(x, tanh(x), 'g-', linewidth=2)\n",
+    "axes[0, 2].set_title('Tanh 함수', fontsize=12)\n",
+    "axes[0, 2].grid(True, alpha=0.3)\n",
+    "axes[0, 2].axhline(y=0, color='k', linewidth=0.5)\n",
+    "axes[0, 2].axvline(x=0, color='k', linewidth=0.5)\n",
+    "\n",
+    "\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "630b85da",
+   "metadata": {},
+   "source": [
+    "## 4. 다층 퍼셉트론 클래스 구현\n",
+    "\n",
+    "아래 조건에 맞춰 순전파와 역전파를 포함한 완전한 MLP를 구현해보세용\n",
+    "\n",
+    "### MLP의 차원 분석\n",
+    "\n",
+    "**네트워크 구조:**\n",
+    "```\n",
+    "입력층 (input_size) → 은닉층 (hidden_size) → 출력층 (output_size)\n",
+    "```\n",
+    "\n",
+    "**가중치 행렬의 차원:**\n",
+    "\n",
+    "1. **첫 번째 층 (입력 → 은닉):**\n",
+    "   - $W_1$: $(input\\_size, hidden\\_size)$ 행렬\n",
+    "   - $b_1$: $(1, hidden\\_size)$ 벡터\n",
+    "   - 예: 입력 2, 은닉 4 → $W_1$은 (2×4) 행렬\n",
+    "\n",
+    "2. **두 번째 층 (은닉 → 출력):**\n",
+    "   - $W_2$: $(hidden\\_size, output\\_size)$ 행렬\n",
+    "   - $b_2$: $(1, output\\_size)$ 벡터\n",
+    "   - 예: 은닉 4, 출력 1 → $W_2$는 (4×1) 행렬\n",
+    "\n",
+    "**순전파 계산:**\n",
+    "- $Z_1 = XW_1 + b_1$ → 차원: $(batch\\_size, hidden\\_size)$\n",
+    "- $A_1 = \\sigma(Z_1)$ → 차원: $(batch\\_size, hidden\\_size)$\n",
+    "- $Z_2 = A_1W_2 + b_2$ → 차원: $(batch\\_size, output\\_size)$\n",
+    "- $A_2 = \\sigma(Z_2)$ → 차원: $(batch\\_size, output\\_size)$\n",
+    "\n",
+    "**파라미터 개수:**\n",
+    "- $W_1$: $input\\_size \\times hidden\\_size$ 개\n",
+    "- $b_1$: $hidden\\_size$ 개\n",
+    "- $W_2$: $hidden\\_size \\times output\\_size$ 개\n",
+    "- $b_2$: $output\\_size$ 개\n",
+    "- **총합**: $input\\_size \\times hidden\\_size + hidden\\_size + hidden\\_size \\times output\\_size + output\\_size$ 개"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b1cc3e7c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 구현"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "538edde7",
+   "metadata": {},
+   "source": [
+    "## 5. 계산 그래프를 이용한 역전파 구현\n",
+    "\n",
+    "직접 구현해보세용"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ac49e1fb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "class AddNode:\n",
+    "    \"\"\"덧셈 노드\"\"\"\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "    \n",
+    "    def forward(self, x, y):\n",
+    "        pass\n",
+    "    \n",
+    "    def backward(self, dout):\n",
+    "        pass\n",
+    "\n",
+    "class MulNode:\n",
+    "    \"\"\"곱셈 노드\"\"\"\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "    \n",
+    "    def forward(self, x, y):\n",
+    "        pass\n",
+    "    \n",
+    "    def backward(self, dout):\n",
+    "        pass\n",
+    "\n",
+    "class ReLUNode:\n",
+    "    \"\"\"ReLU 노드\"\"\"\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "    \n",
+    "    def forward(self, x):\n",
+    "        pass\n",
+    "    \n",
+    "    def backward(self, dout):\n",
+    "        pass\n",
+    "\n",
+    "class SigmoidNode:\n",
+    "    \"\"\"Sigmoid 노드\"\"\"\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "    \n",
+    "    def forward(self, x):\n",
+    "        pass\n",
+    "    \n",
+    "    def backward(self, dout):\n",
+    "        pass"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
