@@ -1,0 +1,1290 @@
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#a7cfc0","primary":"#042d23","background":"#fef9f0","on-primary-fixed-variant":"#294d42","error":"#ba1a1a","tertiary":"#392200","on-tertiary-container":"#d69d4d","outline":"#717975","primary-container":"#1e4338","secondary-fixed-dim":"#a1d1bf","on-surface-variant":"#414845","secondary-container":"#bcedda","inverse-surface":"#32302a","on-primary-fixed":"#002018","on-secondary-container":"#406d5e","outline-variant":"#c1c8c4","primary-fixed":"#c3ebdc","on-tertiary-fixed":"#2a1800","tertiary-fixed":"#ffddb5","surface-container-highest":"#e7e2d9","secondary":"#3a6758","on-surface":"#1d1c16","surface-tint":"#416659","on-secondary-fixed-variant":"#214f41","on-primary-container":"#88afa1","tertiary-container":"#563600","on-background":"#1d1c16","on-error":"#ffffff","surface-container-low":"#f8f3ea","on-secondary-fixed":"#002118","on-primary":"#ffffff","on-tertiary-fixed-variant":"#643f00","tertiary-fixed-dim":"#f9bb68","inverse-primary":"#a7cfc0","inverse-on-surface":"#f5f0e7","surface-container-high":"#ede8df","on-error-container":"#93000a","surface":"#fef9f0","surface-container":"#f2ede4","surface-dim":"#ded9d1","on-secondary":"#ffffff","error-container":"#ffdad6","surface-bright":"#fef9f0","surface-container-lowest":"#ffffff","secondary-fixed":"#bcedda","on-tertiary":"#ffffff","surface-variant":"#e7e2d9"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"card-padding-comfortable":"1.5rem","space-xl":"1.5rem","space-lg":"1.25rem","space-xs":"0.5rem","space-4xl":"3rem","space-2xl":"2rem","margin-mobile":"1.25rem","space-sm":"0.75rem","space-3xl":"2.5rem","gutter-mobile":"0.75rem","space-xxs":"0.25rem","space-md":"1rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"42px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}]}}}};</script></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold tracking-tight">주식 학습지</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-none">Sheets</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="알림" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><a aria-label="내 정보" class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZEqRIMfXmXiTytIXF34fH5X47_VlfwHcgr3X9PCfsFReYAHS1l_Gcqy9HevUy1qDPKXcwGY1wcw5WffA5rYYj0lBwOR_l2T4sYhquxHXaOholfx4KK5M3gNTFA2ImqV93Kldz18-ULYduM0LTTZtM0iAwTEjewlHt6oBTxdsttypTBLk3gg6YOkso_BX5ru6fP_nx5IKwkSL52lAciX6uh12flNAYzdW82tjGIRWEtZz78ZiX4"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full max-w-[480px] mx-auto px-margin-mobile pb-space-3xl gap-space-lg">
+<!-- 상단 환영 영역 & 주간 진도율 카드 -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-card-padding-comfortable shadow-sm relative overflow-hidden">
+<!-- 잔잔한 배경 장식 (책장/시트 모티브) -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-container/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            매일 한 장 습관
+          </span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+            연속 6일째
+          </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-space-xxs">
+          반가워요, 지은님 🌿
+        </h2>
+</div>
+<!-- 미니 종이 학습지 아이콘 스티커 -->
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center text-primary rotate-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">WEEK</span>
+<span class="font-headline-sm text-headline-sm leading-none font-bold text-primary">03</span>
+</div>
+</div>
+<!-- 진도율 정보 -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">이번 주 주식 학습 진도율</span>
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 5장 완료</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold ml-1">(80%)</span>
+</div>
+</div>
+<!-- 5단계 분할 진행 바 -->
+<div class="grid grid-cols-5 gap-1.5 h-2 w-full mt-1">
+<div class="bg-primary rounded-full h-full"></div>
+<div class="bg-primary rounded-full h-full"></div>
+<div class="bg-primary rounded-full h-full"></div>
+<div class="bg-primary rounded-full h-full"></div>
+<div class="bg-surface-container-highest rounded-full h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/20 animate-pulse"></div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+        내일 딱 한 장만 더 풀면 <strong class="text-primary font-semibold">이번 주 학습지 완주 스탬프</strong>를 받아요!
+      </p>
+</div>
+</section>
+<!-- 오늘의 3분 인사이트 카드 (Hero Module) -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-md relative overflow-hidden">
+<!-- 상단 스티커 탭 -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+          오늘의 3분 학습지
+        </span>
+<span class="font-label-md text-label-md text-primary font-bold">Day 14</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">오늘 마감 23:59까지</span>
+</div>
+<!-- 카드 이미지 & 타이틀 블록 -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden mb-space-md bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm, tactile still life scene featuring a textured paper study journal, a sleek wooden pen, and a soft morning cup of green tea on a sunlit oak desk. Earthy sage green tones and creamy warm beige highlights, cozy and serene educational atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP8V65J9aBnRHK5BFqGfNUzBL3Pkbi0TlseNxzOgs6GnGOYrh038s56DOQ9KN0mwD_2IVbmlwmN1AjwRq-k0XL4b0MxPMJsmDbFTNqPTpODvkqGXCLEKiawN-VqnTDcOESfgcd2UcJ0_RcqYbjCSrGIFljq2MMjusiNbiO0pEgAbDXg1qErR03g6iKzogEuA7YFI6Psg2X7HhI0ytycQJys_cupZ03w928RUBbqbXXCD4QyOGmVuI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/30 to-transparent flex items-end p-card-padding-comfortable">
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-wide uppercase font-semibold">실전 멘탈 흔들림 방지</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface leading-snug">
+        시장이 흔들릴 때 내가 지켜야 할 손절 기준선
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+        손실이 두려워 손을 놓아버린 적 있나요? 감정이 앞서기 전, 마음 편안한 매매를 위한 손익비의 기본 뼈대를 3분 만에 정돈해 드립니다.
+      </p>
+</div>
+<!-- 특징 포인트 미니 칩 -->
+<div class="flex items-center gap-space-xs mb-space-lg">
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+        생각 정리 퀴즈 2문항
+      </div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+        핵심 요약 한눈에 보기
+      </div>
+</div>
+<!-- 바로 풀기 CTA 버튼 -->
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" onclick="openSheetModal(14)">
+<span>오늘의 학습지 펼치기</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+<!-- 카테고리 필터 칩 영역 -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">학습지 보관함</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">전체 20장 중 14장 완료</span>
+</div>
+<!-- 횡스크롤 필터 칩 -->
+<div class="flex items-center gap-2 overflow-x-auto py-1 -mx-margin-mobile px-margin-mobile no-scrollbar" id="filterContainer">
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-primary text-on-primary font-semibold shadow-xs" data-category="all">
+        전체
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="mental">
+        기초 멘탈
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="financial">
+        재무제표
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="mistake">
+        실전 실수노트
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="chart">
+        차트 흐름
+      </button>
+</div>
+</section>
+<!-- 세로 목록형 학습지 카드 리스트 -->
+<section class="flex flex-col gap-space-sm" id="sheetCardList">
+<!-- 카드 1: Day 13 (완료됨) -->
+<article class="sheet-item bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm flex flex-col gap-space-sm transition-all hover:bg-surface-bright" data-status="completed">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Day 13</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">재무제표</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+          3분 소요
+        </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center justify-between">
+<span>수익률보다 중요한 손익비(Risk/Reward) 계산법</span>
+</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          적중률 50%로도 계좌를 지키는 수학적 공식과 실전 매뉴얼
+        </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">오답 복습 완료</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1">
+          다시 보기
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- 카드 2: Day 14 (학습 중 - 강조형) -->
+<article class="sheet-item bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-md flex flex-col gap-space-sm relative overflow-hidden" data-status="in-progress">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+            14
+          </span>
+<span class="font-label-md text-label-md text-primary font-bold">Day 14</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+            기초 멘탈
+          </span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+          학습 중
+        </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">
+          시장이 급락할 때 뇌동매매를 멈추는 3가지 호흡법
+        </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          빨간불/파란불에 휘둘리지 않고 HTS 창을 잠시 덮는 구체적인 체크리스트
+        </p>
+</div>
+<!-- 진행 미니 바 -->
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-xs rounded-lg mt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>진행 상태: 2문항 중 1문항 풀이 중</span>
+<span class="font-semibold text-primary">50%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-1/2"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xxs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+          소요시간 4분
+        </span>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 font-semibold active:scale-95 transition-transform" onclick="openSheetModal(14)">
+          이어 풀기
+          <span class="material-symbols-outlined text-[16px]">edit_square</span>
+</button>
+</div>
+</article>
+<!-- 카드 3: Day 15 (내일 오픈) -->
+<article class="sheet-item bg-surface-container-low/70 rounded-xl p-card-padding-comfortable shadow-none flex flex-col gap-space-sm opacity-90" data-status="locked">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Day 15</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">재무제표</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold bg-tertiary-fixed px-2 py-0.5 rounded">
+          내일 오전 06:00 오픈
+        </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface/80">
+          영업이익 vs 당기순이익, 초보자가 꼭 봐야 할 숫자
+        </h4>
+<p class="font-body-md text-body-md text-on-surface-variant/80">
+          회사가 진짜 사업으로 번 돈과 일회성 부대수익을 발라내는 눈 기르기
+        </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+          소요시간 3분 예정
+        </span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1" onclick="toggleReminder(this)">
+<span class="material-symbols-outlined text-[16px]">notification_add</span>
+          알림 예약
+        </button>
+</div>
+</article>
+<!-- 카드 4: Day 16 (예정) -->
+<article class="sheet-item bg-surface-container-low/40 rounded-xl p-card-padding-comfortable shadow-none flex flex-col gap-space-sm opacity-70" data-status="locked">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Day 16</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">실전 실수노트</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">D-2 오픈</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface/70">
+          모두가 열광할 때 분할 매도하는 선배 투자자의 기준
+        </h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70">
+          상승장에서 욕심에 물리지 않고 온전히 수익을 내 계좌로 담는 분할 매도법
+        </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+          소요시간 5분 예정
+        </span>
+<span class="font-label-sm text-label-sm text-outline">순차 오픈 예정</span>
+</div>
+</article>
+</section>
+<!-- 가벼운 용기 부여 토스트 카드 / 친근한 팁 -->
+<section class="flex items-center gap-space-md bg-secondary-container/40 p-card-padding-comfortable rounded-xl">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-secondary-container font-bold">학습 도우미 팁</span>
+<p class="font-body-md text-body-md text-on-surface">
+        주식 공부는 마라톤이에요. 하루 딱 한 장, 3분이면 충분히 단단해집니다.
+      </p>
+</div>
+</section>
+</div>
+<!-- 인터랙션 스크립트: 탭 필터링 및 토스트 피드백 -->
+<script>
+  function openSheetModal(day) {
+    // 경량 사용자 피드백 효과
+    const button = event.currentTarget;
+    const originalText = button.innerHTML;
+    button.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> 학습지 펼치는 중...';
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      alert(`[Day ${day}] 학습지로 이동합니다. 차분하게 한 문제씩 풀어보세요! 📖`);
+    }, 450);
+  }
+
+  function toggleReminder(btn) {
+    const isScheduled = btn.dataset.scheduled === 'true';
+    if (!isScheduled) {
+      btn.dataset.scheduled = 'true';
+      btn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">notifications_active</span> 알림 예약됨';
+    } else {
+      btn.dataset.scheduled = 'false';
+      btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">notification_add</span> 알림 예약';
+    }
+  }
+
+  // 필터 칩 전환 인터랙션
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-xs');
+        c.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      this.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-xs');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(30,67,56,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 flex-1 h-full transition-colors text-primary font-semibold" data-path="sheets" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">홈/학습지</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="today-sheet" href="#"><span class="material-symbols-outlined text-[22px]">edit_calendar</span><span class="font-label-sm text-label-sm">오늘 학습</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="insight-journal" href="#"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span class="font-label-sm text-label-sm">투자 오답노트</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px]">local_library</span><span class="font-label-sm text-label-sm">지식 서재</span></a></div></nav></body></html>
+
+<!-- 주식 학습지 로고 -->
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#a7cfc0","primary":"#042d23","background":"#fef9f0","on-primary-fixed-variant":"#294d42","error":"#ba1a1a","tertiary":"#392200","on-tertiary-container":"#d69d4d","outline":"#717975","primary-container":"#1e4338","secondary-fixed-dim":"#a1d1bf","on-surface-variant":"#414845","secondary-container":"#bcedda","inverse-surface":"#32302a","on-primary-fixed":"#002018","on-secondary-container":"#406d5e","outline-variant":"#c1c8c4","primary-fixed":"#c3ebdc","on-tertiary-fixed":"#2a1800","tertiary-fixed":"#ffddb5","surface-container-highest":"#e7e2d9","secondary":"#3a6758","on-surface":"#1d1c16","surface-tint":"#416659","on-secondary-fixed-variant":"#214f41","on-primary-container":"#88afa1","tertiary-container":"#563600","on-background":"#1d1c16","on-error":"#ffffff","surface-container-low":"#f8f3ea","on-secondary-fixed":"#002118","on-primary":"#ffffff","on-tertiary-fixed-variant":"#643f00","tertiary-fixed-dim":"#f9bb68","inverse-primary":"#a7cfc0","inverse-on-surface":"#f5f0e7","surface-container-high":"#ede8df","on-error-container":"#93000a","surface":"#fef9f0","surface-container":"#f2ede4","surface-dim":"#ded9d1","on-secondary":"#ffffff","error-container":"#ffdad6","surface-bright":"#fef9f0","surface-container-lowest":"#ffffff","secondary-fixed":"#bcedda","on-tertiary":"#ffffff","surface-variant":"#e7e2d9"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"card-padding-comfortable":"1.5rem","space-xl":"1.5rem","space-lg":"1.25rem","space-xs":"0.5rem","space-4xl":"3rem","space-2xl":"2rem","margin-mobile":"1.25rem","space-sm":"0.75rem","space-3xl":"2.5rem","gutter-mobile":"0.75rem","space-xxs":"0.25rem","space-md":"1rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"42px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}]}}}};</script></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold tracking-tight">주식 학습지</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-none">Today Sheet</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="알림" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><a aria-label="내 정보" class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZEqRIMfXmXiTytIXF34fH5X47_VlfwHcgr3X9PCfsFReYAHS1l_Gcqy9HevUy1qDPKXcwGY1wcw5WffA5rYYj0lBwOR_l2T4sYhquxHXaOholfx4KK5M3gNTFA2ImqV93Kldz18-ULYduM0LTTZtM0iAwTEjewlHt6oBTxdsttypTBLk3gg6YOkso_BX5ru6fP_nx5IKwkSL52lAciX6uh12flNAYzdW82tjGIRWEtZz78ZiX4"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full max-w-[480px] mx-auto px-margin-mobile space-y-space-xl">
+<!-- Index & Step Indicator Section -->
+<section class="flex flex-col space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wide">
+          Day 14 워크시트
+        </span>
+<span class="text-on-surface-variant font-label-md text-label-md">리스크 관리 기초편</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span>소요시간 3분</span>
+</div>
+</div>
+<!-- Stepper Indicator -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex flex-col space-y-2">
+<div class="flex justify-between items-center px-1">
+<div class="flex items-center gap-1.5" id="step-node-1">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-xs">1</span>
+<span class="font-label-md text-label-md font-semibold text-primary">선배의 조언</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">arrow_forward</span>
+<div class="flex items-center gap-1.5" id="step-node-2">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-xs">2</span>
+<span class="font-label-md text-label-md font-semibold text-primary">핵심 개념</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">arrow_forward</span>
+<div class="flex items-center gap-1.5" id="step-node-3">
+<span class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant">자가진단</span>
+</div>
+</div>
+<!-- Progress Bar Segment -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-500 w-[66%]" id="interactive-progress-bar"></div>
+</div>
+</div>
+</section>
+<!-- Section 1: Senior Investor's Warm Quote Card -->
+<section class="relative bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm overflow-hidden group">
+<div class="absolute -top-3 -right-3 w-20 h-20 bg-tertiary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-xs">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-tertiary tracking-wide uppercase">선배 투자자의 한 줄 일기</span>
+</div>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface leading-relaxed mt-space-xs mb-space-sm pl-3 border-l-2 border-primary/20">
+      “저도 초보 시절엔 <span class="text-error font-semibold">-5%</span>만 찍혀도 밤잠을 설쳤습니다. 하지만 <strong class="font-semibold text-primary">손절은 손실 확정이 아니라</strong>, 내 소중한 남은 시드를 지키는 <span class="bg-secondary-container/40 px-1.5 py-0.5 rounded">보험료</span>였습니다.”
+    </blockquote>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Warm natural portrait of a calm Korean mentor in a cozy studio library with soft ambient daylight, warm cream and deep sage interior tones, gentle and trustworthy facial expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpuvYrpVi3uKpuNdlPQLS1iHAl-RPj3UDSZuwQ_ZiE0Kz5l3ixLFdIuPVdtOEkWBCZzRwXBbZajh7UlWd6AT7bnfjfegCDa557J1JCJe2C4pY2LGAny-KS2N9cg15880k-m7ewf_SGMpJwuY1dkElPZCn5cFKxUSxDw2sVRhdcuJehlml1YJ3GDccQDu5q9-rUTryRJjjSguRlf-kht6j1VViaIZNjLmImX52mUoQTZWb-6hvjOL4"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">김지수 멘토</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">가치투자 8년차 • 누적 승률 58%</span>
+</div>
+</div>
+<button class="flex items-center gap-1 text-primary hover:text-on-surface-variant font-label-sm text-label-sm transition-colors py-1 px-2 rounded-lg bg-surface-container-low" onclick="toggleSeniorTip(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>간직하기</span>
+</button>
+</div>
+</section>
+<!-- Section 2: 3-Min Core Concept Breakdown -->
+<section class="bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">핵심 요약</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">손익비(Risk-Reward Ratio)란?</h2>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+</div>
+<!-- Bite-Sized Bullet Points -->
+<div class="space-y-space-sm text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<div class="flex items-start gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+<p class="text-on-surface">
+          한 번의 매매에서 <strong class="text-primary font-semibold">감수할 손실액 대비 기대하는 수익의 크기</strong>를 뜻합니다.
+        </p>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+<p class="text-on-surface">
+          초보 투자자는 <span class="underline decoration-secondary-container decoration-4 underline-offset-2">승률 90%의 기법</span>을 찾지만, 노련한 투자자는 오직 <strong>유리한 손익비의 타점</strong>만 기다립니다.
+        </p>
+</div>
+</div>
+<!-- Tactile Diagram / Paper Box -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-inner space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">손익비 1:3의 마법</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded-full">승률 40%의 역설</span>
+</div>
+<!-- Ratio Visual Infographic -->
+<div class="grid grid-cols-2 gap-space-xs py-space-xxs">
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">원칙 손절 기준</span>
+<span class="font-headline-md text-headline-md text-error font-bold mt-1">-3%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">리스크 제한</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">목표 익절 기준</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-1">+9%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">수익은 길게</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-highest/60 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface leading-snug">
+          “손실은 -3%에서 끊고, 수익은 +9%까지 열어둘 때 <strong>승률 40%로도 계좌는 우상향</strong>합니다.”
+        </p>
+</div>
+</div>
+<!-- Editorial Study Tip Footnote -->
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">tips_and_updates</span>
+<span>진입하기 전 차트 위에 손절 라인과 목표 라인을 연필로 긋는 습관을 들이세요.</span>
+</div>
+</section>
+<!-- Section 3: Self-Diagnostic Check & Interactive 1-Question Quiz -->
+<section class="bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm space-y-space-md" id="quiz-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">자가진단 퀴즈</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Q. 실전 대응</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="quiz-status-badge">문항 1/1</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+      “내가 진입하기 전 미리 매도 가격을 정해두지 않았다면 어떻게 해야 할까요?”
+    </h3>
+<!-- Interactive Options -->
+<div aria-label="자가진단 퀴즈 보기" class="space-y-space-xs" role="radiogroup">
+<!-- Option A -->
+<button class="w-full text-left p-space-md rounded-xl bg-surface-container-low transition-all duration-200 flex items-center justify-between group active:scale-[0.99]" data-choice="A" onclick="selectAnswer(this, false)" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-bold transition-colors choice-bullet">
+            A
+          </div>
+<span class="font-body-md text-body-md text-on-surface">일단 시장 흐름을 보면서 들어가고 본다</span>
+</div>
+<span class="material-symbols-outlined text-transparent choice-icon text-[20px]">check_circle</span>
+</button>
+<!-- Option B (Correct Answer, Initially Checked) -->
+<button class="w-full text-left p-space-md rounded-xl bg-secondary-container/40 transition-all duration-200 flex items-center justify-between group active:scale-[0.99] selected-quiz-row" data-choice="B" onclick="selectAnswer(this, true)" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold transition-colors choice-bullet shadow-xs">
+            B
+          </div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">비중을 1/3로 대폭 줄이거나 진입을 멈춘다</span>
+</div>
+<span class="material-symbols-outlined text-primary choice-icon text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+<!-- Explanatory Feedback Box (Reveals with Delight) -->
+<div class="p-space-sm rounded-xl bg-secondary-container/30 transition-all duration-300 flex items-start gap-space-xs" id="quiz-feedback">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">sentiment_satisfied</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">탁월한 판단입니다!</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 leading-relaxed">
+          탈출 계획 없는 진입은 투자가 아니라 도박입니다. 기준이 서지 않았을 땐 쉬어가는 것도 훌륭한 전략입니다.
+        </p>
+</div>
+</div>
+</section>
+<!-- Editorial Warm Companion Note / Illustrated Callout -->
+<section class="bg-tertiary-fixed/30 rounded-xl p-space-md flex items-center gap-space-md">
+<img class="w-14 h-14 rounded-lg object-cover shadow-xs flex-shrink-0" data-alt="Charming hand-drawn watercolor icon illustration of a wooden stamp with ink pad on vintage handmade paper, symbolizing completed study task, minimalist soft pastel style with cream and deep moss green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Di7VvsTIvNjs3GzVxFQXA-IDqrrMGpgBsB9KXoG5gORD7XV73hNYTIDsYVJJk5gAx8wecjzTQPLDWGSVQMXUJST__asv9Dh0KvCSY5GudQbJlIkojmNnU_xUxBfM04Pjt7c-w_s1e6DHGGTI4MZUfzkmjXTxPRYmJfiPn9YSyuo2kWrWY2PG5L3hiZCUh7orQbgIhgFIHtVwBGMMykV37RCoZfihp3DtewlN8uBNVunWVOZ0upM"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-tertiary">학습지 도장 컬렉션</span>
+<p class="font-label-sm text-label-sm text-on-surface leading-snug mt-0.5">
+        오늘 완료 시 <strong class="text-tertiary">‘현명한 원칙주의자’</strong> 14일 연속 완주 스탬프를 획득합니다!
+      </p>
+</div>
+</section>
+<!-- Bottom Floating Action Bar with Tactile Paper Feel -->
+<div class="sticky bottom-4 z-40 w-full pt-space-xs">
+<div class="bg-surface/90 backdrop-blur-md p-space-xs rounded-2xl shadow-xl">
+<button class="w-full h-14 bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-xl shadow-md flex items-center justify-center gap-space-xs transition-all duration-200 active:scale-[0.98]" id="stamp-action-btn" onclick="triggerStampCompletion(this)" type="button">
+<span class="material-symbols-outlined text-[22px]" id="stamp-btn-icon">verified</span>
+<span id="stamp-btn-text">오늘의 학습 완료하고 도장 찍기</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro-Interaction Logic for Workbook Delight -->
+<script>
+  function selectAnswer(buttonEl, isCorrect) {
+    const parent = buttonEl.closest('[role="radiogroup"]');
+    const buttons = parent.querySelectorAll('button');
+    const feedbackBox = document.getElementById('quiz-feedback');
+    const progressBar = document.getElementById('interactive-progress-bar');
+    const stepNode3 = document.getElementById('step-node-3');
+
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-secondary-container/40', 'bg-error-container/40', 'selected-quiz-row');
+      btn.classList.add('bg-surface-container-low');
+      const bullet = btn.querySelector('.choice-bullet');
+      bullet.className = 'w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-bold transition-colors choice-bullet';
+      const icon = btn.querySelector('.choice-icon');
+      icon.classList.remove('text-primary', 'text-error');
+      icon.classList.add('text-transparent');
+      icon.textContent = 'check_circle';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      btn.querySelector('span.font-body-md').classList.remove('font-semibold');
+    });
+
+    buttonEl.classList.remove('bg-surface-container-low');
+    const chosenBullet = buttonEl.querySelector('.choice-bullet');
+    const chosenIcon = buttonEl.querySelector('.choice-icon');
+    const chosenText = buttonEl.querySelector('span.font-body-md');
+    chosenText.classList.add('font-semibold');
+
+    if (isCorrect) {
+      buttonEl.classList.add('bg-secondary-container/40', 'selected-quiz-row');
+      chosenBullet.className = 'w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold shadow-xs choice-bullet';
+      chosenIcon.className = 'material-symbols-outlined text-primary choice-icon text-[20px]';
+      chosenIcon.style.fontVariationSettings = "'FILL' 1";
+
+      feedbackBox.className = 'p-space-sm rounded-xl bg-secondary-container/30 transition-all duration-300 flex items-start gap-space-xs';
+      feedbackBox.innerHTML = `
+        <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">sentiment_satisfied</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-bold text-primary">탁월한 판단입니다!</span>
+          <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 leading-relaxed">
+            탈출 계획 없는 진입은 투자가 아니라 도박입니다. 기준이 서지 않았을 땐 쉬어가는 것도 훌륭한 전략입니다.
+          </p>
+        </div>
+      `;
+
+      if (progressBar) progressBar.style.width = '100%';
+      if (stepNode3) {
+        const badge = stepNode3.querySelector('span:first-child');
+        badge.className = 'w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-xs';
+        const label = stepNode3.querySelector('span:last-child');
+        label.className = 'font-label-md text-label-md font-semibold text-primary';
+      }
+    } else {
+      buttonEl.classList.add('bg-error-container/40');
+      chosenBullet.className = 'w-6 h-6 rounded-full bg-error text-on-error flex items-center justify-center font-label-md text-label-md font-bold shadow-xs choice-bullet';
+      chosenIcon.className = 'material-symbols-outlined text-error choice-icon text-[20px]';
+      chosenIcon.textContent = 'cancel';
+      chosenIcon.style.fontVariationSettings = "'FILL' 1";
+
+      feedbackBox.className = 'p-space-sm rounded-xl bg-error-container/20 transition-all duration-300 flex items-start gap-space-xs';
+      feedbackBox.innerHTML = `
+        <span class="material-symbols-outlined text-error text-[20px] mt-0.5">error_outline</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-bold text-error">다시 한 번 생각해보세요!</span>
+          <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 leading-relaxed">
+            원칙 없이 들어간 매매는 물렸을 때 감정적 대응으로 이어져 계좌에 큰 치명타를 입힙니다.
+          </p>
+        </div>
+      `;
+    }
+  }
+
+  function toggleSeniorTip(buttonEl) {
+    const icon = buttonEl.querySelector('.material-symbols-outlined');
+    const label = buttonEl.querySelector('span:last-child');
+    if (icon.textContent === 'bookmark_border') {
+      icon.textContent = 'bookmark';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      buttonEl.classList.add('text-tertiary');
+      label.textContent = '저장됨';
+    } else {
+      icon.textContent = 'bookmark_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      buttonEl.classList.remove('text-tertiary');
+      label.textContent = '간직하기';
+    }
+  }
+
+  function triggerStampCompletion(buttonEl) {
+    const icon = document.getElementById('stamp-btn-icon');
+    const text = document.getElementById('stamp-btn-text');
+    
+    buttonEl.disabled = true;
+    buttonEl.classList.remove('bg-primary');
+    buttonEl.classList.add('bg-secondary', 'scale-95');
+
+    icon.textContent = 'hourglass_empty';
+    text.textContent = '스탬프 찍는 중...';
+
+    setTimeout(() => {
+      buttonEl.classList.remove('scale-95');
+      buttonEl.classList.add('bg-primary-container');
+      icon.textContent = 'workspace_premium';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      text.textContent = 'Day 14 학습 완료! 💮';
+
+      // Delightful notification banner
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full shadow-xl flex items-center gap-2 z-50 font-label-md text-label-md animate-bounce';
+      toast.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">hotel_class</span> 14일차 학습지 완료 도장이 찍혔습니다!';
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, 3500);
+    }, 600);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(30,67,56,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="sheets" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">홈/학습지</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 flex-1 h-full transition-colors text-primary font-semibold" data-path="today-sheet" href="#"><span class="material-symbols-outlined text-[22px]">edit_calendar</span><span class="font-label-sm text-label-sm">오늘 학습</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="insight-journal" href="#"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span class="font-label-sm text-label-sm">투자 오답노트</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px]">local_library</span><span class="font-label-sm text-label-sm">지식 서재</span></a></div></nav></body></html>
+
+<!-- Minimalist friendly modern avatar profile photo of a young professional Korean learner, friendly natural smile, soft warm neutral lighting, minimalist clean background, high quality portrait. -->
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#a7cfc0","primary":"#042d23","background":"#fef9f0","on-primary-fixed-variant":"#294d42","error":"#ba1a1a","tertiary":"#392200","on-tertiary-container":"#d69d4d","outline":"#717975","primary-container":"#1e4338","secondary-fixed-dim":"#a1d1bf","on-surface-variant":"#414845","secondary-container":"#bcedda","inverse-surface":"#32302a","on-primary-fixed":"#002018","on-secondary-container":"#406d5e","outline-variant":"#c1c8c4","primary-fixed":"#c3ebdc","on-tertiary-fixed":"#2a1800","tertiary-fixed":"#ffddb5","surface-container-highest":"#e7e2d9","secondary":"#3a6758","on-surface":"#1d1c16","surface-tint":"#416659","on-secondary-fixed-variant":"#214f41","on-primary-container":"#88afa1","tertiary-container":"#563600","on-background":"#1d1c16","on-error":"#ffffff","surface-container-low":"#f8f3ea","on-secondary-fixed":"#002118","on-primary":"#ffffff","on-tertiary-fixed-variant":"#643f00","tertiary-fixed-dim":"#f9bb68","inverse-primary":"#a7cfc0","inverse-on-surface":"#f5f0e7","surface-container-high":"#ede8df","on-error-container":"#93000a","surface":"#fef9f0","surface-container":"#f2ede4","surface-dim":"#ded9d1","on-secondary":"#ffffff","error-container":"#ffdad6","surface-bright":"#fef9f0","surface-container-lowest":"#ffffff","secondary-fixed":"#bcedda","on-tertiary":"#ffffff","surface-variant":"#e7e2d9"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"card-padding-comfortable":"1.5rem","space-xl":"1.5rem","space-lg":"1.25rem","space-xs":"0.5rem","space-4xl":"3rem","space-2xl":"2rem","margin-mobile":"1.25rem","space-sm":"0.75rem","space-3xl":"2.5rem","gutter-mobile":"0.75rem","space-xxs":"0.25rem","space-md":"1rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"42px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}]}}}};</script></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold tracking-tight">주식 학습지</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-none">Insight Journal</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="알림" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><a aria-label="내 정보" class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZEqRIMfXmXiTytIXF34fH5X47_VlfwHcgr3X9PCfsFReYAHS1l_Gcqy9HevUy1qDPKXcwGY1wcw5WffA5rYYj0lBwOR_l2T4sYhquxHXaOholfx4KK5M3gNTFA2ImqV93Kldz18-ULYduM0LTTZtM0iAwTEjewlHt6oBTxdsttypTBLk3gg6YOkso_BX5ru6fP_nx5IKwkSL52lAciX6uh12flNAYzdW82tjGIRWEtZz78ZiX4"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full max-w-[480px] mx-auto px-margin-mobile gap-space-lg">
+<!-- Top Insight Header Statement (No duplicate H1) -->
+<div class="pt-space-xs flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 self-start px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">psychology_alt</span>
+      마인드셋 저널
+    </div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">나의 투자 오답노트</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">실수를 기록할 때마다 더 단단한 투자자가 됩니다.</p>
+</div>
+<!-- Stat Summary Bento Card -->
+<div class="rounded-xl bg-surface-container-lowest p-card-padding-comfortable shadow-[0_4px_20px_-2px_rgba(30,67,56,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-lg text-label-lg text-primary">이번 달 회고 리포트</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded-full">2025. 02월 기준</span>
+</div>
+<!-- Stat Counter Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="rounded-lg bg-surface-container-low p-space-sm flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">기록한 실수</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">18</span>
+<span class="font-body-md text-body-md text-on-surface-variant">건</span>
+</div>
+</div>
+<div class="rounded-lg bg-secondary-container/40 p-space-sm flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-secondary-container">개선 성공</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight font-bold">14</span>
+<span class="font-body-md text-body-md text-on-secondary-container">건 (78%)</span>
+</div>
+</div>
+</div>
+<!-- Frequent Pattern Alert Chip Box -->
+<div class="rounded-lg bg-surface-container px-space-sm py-2.5 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">이번 달 가장 빈번한 패턴</span>
+<span class="font-label-lg text-label-lg text-primary truncate font-bold">급등주 추격매수 (총 6회 포착)</span>
+</div>
+</div>
+</div>
+<!-- Visual Delight / Quote Banner with Image Placeholder -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high flex items-center min-h-[92px] shadow-sm">
+<div class="w-24 h-full shrink-0 self-stretch">
+<img class="w-full h-full object-cover" data-alt="Warm aesthetic flatlay of a leather-bound journal, a minimalist brass fountain pen, and softly lit warm morning sunlight reflecting on creamy thick study workbook pages in natural sage green tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqtM2zizdEPUUXHDUcCR3b12_62XAk9ZS5Fj6_sA0PpOtgB_64wi5o7HM8Rn6N_phtksSeQnlIdox6L-CnTDV63oOp9Zl6TlrPddjUsDD_vTTu-HTkH_CnvCMXbX8rMnf3mn5UEPw3oMZB63Fe2pEqu1-nxRjMx4J-p-TVWRcCnAvcE3CEIBHy6sVb7Gx0ZOaWP1tffr5W-X_AyNg2XjZHurr0hVwujcnrIGveguRI7cpAaIYSv0M"/>
+</div>
+<div class="p-space-sm flex flex-col justify-center flex-1">
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tips_and_updates</span>
+        워런 버핏의 한마디
+      </span>
+<p class="font-body-md text-body-md text-on-surface italic line-clamp-2">"실수로부터 배우지 못하는 것이 시장에서 치러야 할 가장 값비싼 대가다."</p>
+</div>
+</div>
+<!-- Tag Category Horizontal Scroll -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">오답 유형별 모아보기</span>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer">최신순 ↓</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 -mx-margin-mobile px-margin-mobile no-scrollbar" id="filter-container">
+<button class="filter-btn h-8 px-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0 transition-transform active:scale-95 shadow-sm" data-filter="all">전체 18</button>
+<button class="filter-btn h-8 px-space-sm rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-transform active:scale-95 hover:bg-surface-container-high" data-filter="impulsive">뇌동매매 6</button>
+<button class="filter-btn h-8 px-space-sm rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-transform active:scale-95 hover:bg-surface-container-high" data-filter="rule">원칙위반 5</button>
+<button class="filter-btn h-8 px-space-sm rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-transform active:scale-95 hover:bg-surface-container-high" data-filter="stoploss">손절지연 4</button>
+<button class="filter-btn h-8 px-space-sm rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-transform active:scale-95 hover:bg-surface-container-high" data-filter="profit">익절조급 3</button>
+</div>
+</div>
+<!-- Timeline Cards Section -->
+<div class="flex flex-col gap-space-md relative">
+<!-- Timeline Vertical Line Accent -->
+<div class="absolute left-3 top-4 bottom-4 w-0.5 bg-surface-container-highest -z-0"></div>
+<!-- Timeline Card 1 -->
+<div class="timeline-entry relative pl-8 flex flex-col" data-category="impulsive rule">
+<!-- Node Indicator on Timeline -->
+<div class="absolute left-1.5 top-5 w-3.5 h-3.5 rounded-full bg-surface ring-4 ring-primary z-10"></div>
+<article class="rounded-xl bg-surface-container-lowest p-card-padding-comfortable shadow-[0_4px_20px_-2px_rgba(30,67,56,0.06)] flex flex-col gap-space-sm transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,67,56,0.09)]">
+<!-- Card Meta Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">event</span>
+            2025. 02. 24 (월)
+          </div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            복기 완료
+          </span>
+</div>
+<!-- Case Title -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          "장 시작하자마자 15% 뜬 테마주에 충동 진입"
+        </h3>
+<!-- Cause Callout -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">sentiment_dissatisfied</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">원인 분석</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">단톡방 열기 속에서 나만 소외되는 듯한 극심한 FOMO 감정 발동</span>
+</div>
+</div>
+<!-- Takeaway & Lesson Paper Block -->
+<div class="rounded-lg bg-tertiary-fixed/20 p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+<span class="font-label-sm text-label-sm font-bold">복기 &amp; 배운 점</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-6">
+            "9시~9시 30분은 절대 관망하고 장중 눌림목까지 기다리기로 한 원칙 위반. 다음부터는 장초반 매수는 화면을 끄고 사전에 짜둔 예약 매수만 건다."
+          </p>
+</div>
+<!-- Footer Tags and Action Menu -->
+<div class="pt-1 flex items-center justify-between border-t-0">
+<div class="flex items-center gap-1 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">#뇌동매매</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">#원칙미준수</span>
+</div>
+<button aria-label="메뉴 더보기" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Timeline Card 2 -->
+<div class="timeline-entry relative pl-8 flex flex-col" data-category="rule profit">
+<!-- Node Indicator on Timeline -->
+<div class="absolute left-1.5 top-5 w-3.5 h-3.5 rounded-full bg-surface ring-4 ring-secondary z-10"></div>
+<article class="rounded-xl bg-surface-container-lowest p-card-padding-comfortable shadow-[0_4px_20px_-2px_rgba(30,67,56,0.06)] flex flex-col gap-space-sm transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,67,56,0.09)]">
+<!-- Card Meta Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">event</span>
+            2025. 02. 18 (화)
+          </div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">published_with_changes</span>
+            행동 교정 중
+          </span>
+</div>
+<!-- Case Title -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+          "목표가 도달했는데 더 갈 것 같아 욕심부리다 본전 마감"
+        </h3>
+<!-- Cause Callout -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">trending_down</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">원인 분석</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">수익 확정 시점의 욕심 통제 실패 및 분할 익절 원칙 미준수</span>
+</div>
+</div>
+<!-- Takeaway & Lesson Paper Block -->
+<div class="rounded-lg bg-tertiary-fixed/20 p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+<span class="font-label-sm text-label-sm font-bold">복기 &amp; 배운 점</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-6">
+            "1차 목표가 도달 시 최소 50% 분할 매도를 실행했다면 나머지 잔여 물량도 흔들림 없이 편안하게 대응할 수 있었음. 목표가 알람 즉시 기계적 매도 실행할 것."
+          </p>
+</div>
+<!-- Footer Tags and Action Menu -->
+<div class="pt-1 flex items-center justify-between">
+<div class="flex items-center gap-1 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">#익절조급</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">#원칙위반</span>
+</div>
+<button aria-label="메뉴 더보기" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</article>
+</div>
+</div>
+<!-- Warm Human Mindful Encouragement Card -->
+<div class="rounded-xl bg-surface-container-high/60 p-space-md flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary">기록이 쌓일수록 손실은 줄어듭니다</span>
+<p class="font-body-md text-body-md text-on-surface-variant">지난달 대비 감정 매매 비율이 24% 감소했어요!</p>
+</div>
+</div>
+<!-- Sticky Bottom Floating Action Button (FAB) Area -->
+<div class="sticky bottom-20 z-40 flex justify-end pr-1 pointer-events-none">
+<button class="pointer-events-auto h-13 px-5 py-3.5 rounded-full bg-primary text-on-primary shadow-[0_8px_24px_rgba(4,45,35,0.3)] flex items-center gap-2 font-label-lg text-label-lg hover:bg-primary-container active:scale-95 transition-all cursor-pointer" id="fab-new-mistake">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>+ 새 오답 작성</span>
+</button>
+</div>
+<!-- Interactive Modal Drawer for "+ 새 오답 작성" -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end justify-center p-0 transition-opacity duration-300" id="quick-note-modal">
+<div class="w-full max-w-[480px] bg-surface rounded-t-[28px] p-card-padding-comfortable shadow-2xl flex flex-col gap-space-md transform transition-transform duration-300 translate-y-full" id="modal-sheet">
+<!-- Handle Bar -->
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest self-center"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">오답 복기하기</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">어떤 실수를 경험하셨나요?</h4>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Form -->
+<div class="flex flex-col gap-space-sm">
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface-variant">한 줄 요약</span>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest" placeholder="예: 시초가 급등주 추격매수 후 패닉셀" type="text"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface-variant">당시 느낀 감정 및 원인</span>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest" placeholder="예: FOMO, 욕심, 손실 두려움" type="text"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface-variant">앞으로의 행동 지침 (복기)</span>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest resize-none" placeholder="예: 다음에는 지정가 알림만 켜두고 본장을 끕니다." rows="3"></textarea>
+</label>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 h-13 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-98 transition-transform shadow-md" id="submit-mistake-btn">
+<span class="material-symbols-outlined text-[18px]">save</span>
+          기록 저장하기
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for Tag Filtering & Modal
+  (function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const timelineEntries = document.querySelectorAll('.timeline-entry');
+    const fabBtn = document.getElementById('fab-new-mistake');
+    const modal = document.getElementById('quick-note-modal');
+    const sheet = document.getElementById('modal-sheet');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const submitBtn = document.getElementById('submit-mistake-btn');
+
+    // Filter interaction
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset styles
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        // Set active style
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        const filter = btn.dataset.filter;
+        timelineEntries.forEach(entry => {
+          if (filter === 'all') {
+            entry.style.display = 'flex';
+          } else {
+            const categories = entry.dataset.category || '';
+            if (categories.includes(filter)) {
+              entry.style.display = 'flex';
+            } else {
+              entry.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Modal Drawer open / close
+    function openModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        sheet.classList.remove('translate-y-full');
+      }, 10);
+    }
+
+    function closeModal() {
+      sheet.classList.add('translate-y-full');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 250);
+    }
+
+    if (fabBtn) fabBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (submitBtn) submitBtn.addEventListener('click', () => {
+      alert('오답이 소중하게 기록되었습니다. 한 번 더 성장하셨네요!');
+      closeModal();
+    });
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(30,67,56,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="sheets" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">홈/학습지</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="today-sheet" href="#"><span class="material-symbols-outlined text-[22px]">edit_calendar</span><span class="font-label-sm text-label-sm">오늘 학습</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 flex-1 h-full transition-colors text-primary font-semibold" data-path="insight-journal" href="#"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span class="font-label-sm text-label-sm">투자 오답노트</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px]">local_library</span><span class="font-label-sm text-label-sm">지식 서재</span></a></div></nav></body></html>
+
+<!-- 학습지 홈 및 로드맵 -->
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#a7cfc0","primary":"#042d23","background":"#fef9f0","on-primary-fixed-variant":"#294d42","error":"#ba1a1a","tertiary":"#392200","on-tertiary-container":"#d69d4d","outline":"#717975","primary-container":"#1e4338","secondary-fixed-dim":"#a1d1bf","on-surface-variant":"#414845","secondary-container":"#bcedda","inverse-surface":"#32302a","on-primary-fixed":"#002018","on-secondary-container":"#406d5e","outline-variant":"#c1c8c4","primary-fixed":"#c3ebdc","on-tertiary-fixed":"#2a1800","tertiary-fixed":"#ffddb5","surface-container-highest":"#e7e2d9","secondary":"#3a6758","on-surface":"#1d1c16","surface-tint":"#416659","on-secondary-fixed-variant":"#214f41","on-primary-container":"#88afa1","tertiary-container":"#563600","on-background":"#1d1c16","on-error":"#ffffff","surface-container-low":"#f8f3ea","on-secondary-fixed":"#002118","on-primary":"#ffffff","on-tertiary-fixed-variant":"#643f00","tertiary-fixed-dim":"#f9bb68","inverse-primary":"#a7cfc0","inverse-on-surface":"#f5f0e7","surface-container-high":"#ede8df","on-error-container":"#93000a","surface":"#fef9f0","surface-container":"#f2ede4","surface-dim":"#ded9d1","on-secondary":"#ffffff","error-container":"#ffdad6","surface-bright":"#fef9f0","surface-container-lowest":"#ffffff","secondary-fixed":"#bcedda","on-tertiary":"#ffffff","surface-variant":"#e7e2d9"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"card-padding-comfortable":"1.5rem","space-xl":"1.5rem","space-lg":"1.25rem","space-xs":"0.5rem","space-4xl":"3rem","space-2xl":"2rem","margin-mobile":"1.25rem","space-sm":"0.75rem","space-3xl":"2.5rem","gutter-mobile":"0.75rem","space-xxs":"0.25rem","space-md":"1rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"42px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}]}}}};</script></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold tracking-tight">주식 학습지</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-none">Library</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="알림" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><a aria-label="내 정보" class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZEqRIMfXmXiTytIXF34fH5X47_VlfwHcgr3X9PCfsFReYAHS1l_Gcqy9HevUy1qDPKXcwGY1wcw5WffA5rYYj0lBwOR_l2T4sYhquxHXaOholfx4KK5M3gNTFA2ImqV93Kldz18-ULYduM0LTTZtM0iAwTEjewlHt6oBTxdsttypTBLk3gg6YOkso_BX5ru6fP_nx5IKwkSL52lAciX6uh12flNAYzdW82tjGIRWEtZz78ZiX4"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-4xl">
+<!-- Minimal Search Bar Section -->
+<section class="mt-space-md mb-space-xl">
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-space-sm transition-all focus-within:shadow-md">
+<span class="material-symbols-outlined text-secondary text-[22px] mr-space-xs">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="librarySearchInput" placeholder="궁금한 투자 원칙이나 용어를 검색해 보세요" type="text"/>
+<button aria-label="검색어 지우기" class="hidden text-outline hover:text-on-surface transition-colors p-1" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Quick Pill Badges for Frequently Searched Terms -->
+<div class="flex items-center gap-space-xs overflow-x-auto mt-space-sm pb-space-xxs scrollbar-none">
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">추천 검색어</span>
+<button class="search-tag px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest rounded-full text-secondary font-label-md text-label-md whitespace-nowrap transition-colors">
+        안전마진
+      </button>
+<button class="search-tag px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest rounded-full text-secondary font-label-md text-label-md whitespace-nowrap transition-colors">
+        ROE 분석
+      </button>
+<button class="search-tag px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest rounded-full text-secondary font-label-md text-label-md whitespace-nowrap transition-colors">
+        분할매수 원칙
+      </button>
+<button class="search-tag px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest rounded-full text-secondary font-label-md text-label-md whitespace-nowrap transition-colors">
+        거래량 다이버전스
+      </button>
+</div>
+</section>
+<!-- Reading Status / Delight Banner -->
+<section class="mb-space-2xl bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col z-10 max-w-[70%]">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">서재 진척도</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">총 45편 중 18편 열람</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">어제보다 단단한 원칙이 쌓이고 있어요.</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-on-secondary-container text-[30px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+</div>
+<!-- Subtle paper-fold aesthetic backdrop -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-surface-container-low opacity-60 pointer-events-none"></div>
+</section>
+<!-- Category Grid Section -->
+<section class="mb-space-2xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider block mb-0.5">THEMATIC SHELF</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">테마별 지식 보관함</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4개 테마</span>
+</div>
+<!-- 2-Column Bento Grid of Knowledge Domains -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Theme 1: Mindset -->
+<article class="theme-card group bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between cursor-pointer transition-all duration-200 hover:shadow-md hover:-translate-y-0.5" data-theme="mindset">
+<div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="text-xl">🧠</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mb-1">심리 &amp; 원칙</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-space-xs">투자 마인드셋 &amp; 심리</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">군중 심리와 FOMO를 이기는 나만의 안전장치</p>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">총 12편</span>
+<span class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Theme 2: Financial Statements -->
+<article class="theme-card group bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between cursor-pointer transition-all duration-200 hover:shadow-md hover:-translate-y-0.5" data-theme="finance">
+<div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="text-xl">📊</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mb-1">기본적 분석</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-space-xs">3분 재무제표 읽기</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">복잡한 회계지표 중 꼭 봐야 할 3가지</p>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">총 15편</span>
+<span class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Theme 3: Technical & Volume -->
+<article class="theme-card group bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between cursor-pointer transition-all duration-200 hover:shadow-md hover:-translate-y-0.5" data-theme="chart">
+<div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="text-xl">📈</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mb-1">기술적 지표</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-space-xs">차트와 거래량의 진실</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">속임수 캔들과 진짜 자금의 흔적 분별법</p>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">총 10편</span>
+<span class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Theme 4: Risk Management -->
+<article class="theme-card group bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between cursor-pointer transition-all duration-200 hover:shadow-md hover:-translate-y-0.5" data-theme="risk">
+<div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="text-xl">🛡️</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mb-1">자산 보호</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-space-xs">계좌를 살리는 리스크 관리</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">MDD 방어와 손절선 기계적 실행 노하우</p>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">총 8편</span>
+<span class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Saved Quote Collection Section (Slide Carousel) -->
+<section class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">format_quote</span>
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider block mb-0.5">HIGHLIGHT CARDS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">내가 스크랩한 핵심 문장</h2>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="이전 카드" class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" id="carouselPrevBtn">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="다음 카드" class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" id="carouselNextBtn">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Slide Track -->
+<div class="flex gap-space-md overflow-x-auto pb-space-md snap-x snap-mandatory scroll-smooth scrollbar-none" id="quoteCarousel">
+<!-- Slide Card 1 -->
+<div class="quote-card flex-none w-[84%] max-w-[360px] snap-center bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm flex flex-col justify-between relative transition-transform">
+<!-- Visual Accent Stamp -->
+<div class="absolute top-4 right-4 text-tertiary-fixed-dim/30 pointer-events-none">
+<span class="material-symbols-outlined text-[54px] leading-none select-none">format_quote</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container rounded font-label-sm text-label-sm font-semibold">가치투자 원칙</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3주 전 스크랩</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold leading-relaxed mb-space-md relative z-10">
+            “좋은 주식을 비싸게 사는 것보다, 평범한 주식을 안전마진이 있을 때 사는 것이 낫다.”
+          </p>
+<p class="font-label-md text-label-md text-secondary font-medium">
+            — 벤저민 그레이엄 (Benjamin Graham)
+          </p>
+</div>
+<!-- Action Tray -->
+<div class="mt-space-xl pt-space-md flex items-center justify-between border-t-0 bg-surface-container-low rounded-lg px-space-md py-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span>
+            재무제표 2편 출처
+          </span>
+<div class="flex items-center gap-space-xs">
+<button aria-label="문장 공유" class="quote-share-btn w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs" data-quote="좋은 주식을 비싸게 사는 것보다, 평범한 주식을 안전마진이 있을 때 사는 것이 낫다. - 벤저민 그레이엄">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button aria-label="북마크 토글" class="quote-bookmark-btn w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:text-on-tertiary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Slide Card 2 -->
+<div class="quote-card flex-none w-[84%] max-w-[360px] snap-center bg-surface-container-lowest rounded-xl p-card-padding-comfortable shadow-sm flex flex-col justify-between relative transition-transform">
+<!-- Visual Accent Stamp -->
+<div class="absolute top-4 right-4 text-tertiary-fixed-dim/30 pointer-events-none">
+<span class="material-symbols-outlined text-[54px] leading-none select-none">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="px-space-xs py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded font-label-sm text-label-sm font-semibold">리스크 방어</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">어제 스크랩</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold leading-relaxed mb-space-md relative z-10">
+            “손절매는 틀렸음을 인정하는 게 아니라 계좌의 생명을 연장하는 기술이다.”
+          </p>
+<p class="font-label-md text-label-md text-secondary font-medium">
+            — 트레이딩 심리학 노트
+          </p>
+</div>
+<!-- Action Tray -->
+<div class="mt-space-xl pt-space-md flex items-center justify-between border-t-0 bg-surface-container-low rounded-lg px-space-md py-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span>
+            리스크 관리 4편 출처
+          </span>
+<div class="flex items-center gap-space-xs">
+<button aria-label="문장 공유" class="quote-share-btn w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs" data-quote="손절매는 틀렸음을 인정하는 게 아니라 계좌의 생명을 연장하는 기술이다.">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button aria-label="북마크 토글" class="quote-bookmark-btn w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:text-on-tertiary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Slide Card 3 (Empty / Add More Invitation) -->
+<div class="flex-none w-[84%] max-w-[360px] snap-center bg-surface-container-low rounded-xl p-card-padding-comfortable flex flex-col items-center justify-center text-center shadow-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">bookmark_add</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">새로운 문장 스크랩하기</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">학습지를 풀다 마음에 와닿은 문장을 길게 꾹 누르면 서재에 담깁니다.</p>
+<button class="px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-xs">
+          오늘 학습지 열기
+        </button>
+</div>
+</div>
+<!-- Toast Notification for Interaction Delight -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-2 rounded-full font-label-md text-label-md shadow-lg flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50" id="toastMessage">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span id="toastText">클립보드에 문장이 복사되었습니다.</span>
+</div>
+</section>
+</div>
+<script>
+  (function initKnowledgeLibrary() {
+    const searchInput = document.getElementById('librarySearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const themeCards = document.querySelectorAll('.theme-card');
+    const searchTags = document.querySelectorAll('.search-tag');
+    const toast = document.getElementById('toastMessage');
+    const toastText = document.getElementById('toastText');
+    const carousel = document.getElementById('quoteCarousel');
+    const prevBtn = document.getElementById('carouselPrevBtn');
+    const nextBtn = document.getElementById('carouselNextBtn');
+
+    function showToast(msg) {
+      if (!toast || !toastText) return;
+      toastText.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+
+    // Search Input handling
+    if (searchInput && clearBtn) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        if (query.length > 0) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+
+        // Live visual highlight filter for category cards
+        themeCards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          if (query === '' || text.includes(query.toLowerCase())) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        themeCards.forEach((card) => card.style.display = 'flex');
+        searchInput.focus();
+      });
+    }
+
+    // Recommended pills click to search
+    searchTags.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const term = btn.textContent.trim();
+        if (searchInput) {
+          searchInput.value = term;
+          searchInput.dispatchEvent(new Event('input'));
+          showToast(`'${term}' 키워드로 검색했습니다.`);
+        }
+      });
+    });
+
+    // Bookmark Toggle Interaction
+    document.querySelectorAll('.quote-bookmark-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (!icon) return;
+        const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-primary');
+          btn.classList.add('text-outline');
+          showToast('보관함에서 문장을 제외했습니다.');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('text-outline');
+          btn.classList.add('text-primary');
+          showToast('문장을 북마크 보관함에 저장했습니다.');
+        }
+      });
+    });
+
+    // Share Button Interaction
+    document.querySelectorAll('.quote-share-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const text = btn.getAttribute('data-quote') || '';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            showToast('인용 문구가 클립보드에 복사되었습니다.');
+          } catch (err) {
+            showToast('공유용 문구가 복사되었습니다.');
+          }
+        } else {
+          showToast('공유용 문구가 복사되었습니다.');
+        }
+      });
+    });
+
+    // Carousel Navigation
+    if (carousel && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -280, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 280, behavior: 'smooth' });
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(30,67,56,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="sheets" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">홈/학습지</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="today-sheet" href="#"><span class="material-symbols-outlined text-[22px]">edit_calendar</span><span class="font-label-sm text-label-sm">오늘 학습</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 h-full text-on-surface-variant transition-colors" data-path="insight-journal" href="#"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span class="font-label-sm text-label-sm">투자 오답노트</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 flex-1 h-full transition-colors text-primary font-semibold" data-path="library" href="#"><span class="material-symbols-outlined text-[22px]">local_library</span><span class="font-label-sm text-label-sm">지식 서재</span></a></div></nav></body></html>
